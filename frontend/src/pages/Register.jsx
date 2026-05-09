@@ -14,8 +14,8 @@ export default function Register() {
 
     try {
 
-      await API.post("/auth/register", {
-        username,
+      await API.post("/auth/signup", {
+        name: username,
         email,
         password,
       });
@@ -74,6 +74,16 @@ export default function Register() {
           >
             Register
           </button>
+
+          <p className="text-white text-center mt-4">
+            Already have an account?{" "}
+            <span
+              onClick={() => navigate("/")}
+              className="text-blue-500 cursor-pointer font-bold"
+            >
+              Login
+            </span>
+          </p>
 
         </div>
 
